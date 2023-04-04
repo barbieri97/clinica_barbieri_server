@@ -97,7 +97,7 @@ function sendEmail(body) {
     Body: body,
   }).then((mensagem) => {
     if (mensagem == "OK") {
-      window.location.href = "/agradecimento/1";
+      window.location.href = "/contato/agradecimento/1";
     } else {
       alert("houve um erro ao enviar o contato, tente novamente mais tarde.");
     }
