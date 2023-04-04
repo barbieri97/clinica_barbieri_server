@@ -1,0 +1,54 @@
+/* Menu css */
+
+menu {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color1);
+}
+
+menu a {
+    font-size: larger;
+    text-decoration: none;
+    color: var(--white);
+    margin: 3px;
+}
+.menu-open {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-bottom: 10px;
+}
+
+.menu-open img {
+    width: 70px;
+}
+
+menu .close-menu {
+    width: 30px;
+    cursor: pointer;
+}
+
+menu ul {
+    width: 80%;
+    list-style: none;
+}
+
+menu li {
+    margin-bottom: 15px;
+    border-bottom: var(--white) 1px solid;
+}
+
+menu p {
+    color: var(--white);
+    text-align: left;
+    margin-top: 50px;
+}
