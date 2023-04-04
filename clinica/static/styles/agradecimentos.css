@@ -1,19 +1,18 @@
 .mainlogo {
-    margin: 10px;
-    width: 200px;
+  margin: 10px;
+  width: 200px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-
 main .container {
-    min-height: 600px;
-    max-width: 500px;
-    margin: 20px ;
-    padding: 5px;
-    box-shadow: 0px 0px 50px var(--black-transparent);
-    border-radius: 15px;
-    background-image: url('/assets/textura.png');
+  min-height: 600px;
+  max-width: 500px;
+  margin: 20px;
+  padding: 5px;
+  box-shadow: 0px 0px 50px var(--black-transparent);
+  border-radius: 15px;
+  background-image: url("../assets/textura.png");
 }

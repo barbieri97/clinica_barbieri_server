@@ -1,0 +1,37 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+{% endblock %} {% block content %}
+<main>
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/orientacao-ilustration.png' %}"
+        alt="guidance ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A criação dos filhos pode ser uma das tarefas que uma pessoa pode
+      enfrentar, muitas duvidas podem surgir durante o percurso e muitas vezes
+      os pais se vêem atrás de uma resposta que talvez nem exista. Criar o meu
+      filho com rigidez ou ser mais compreensivo? Devo permitir o uso de telas
+      ou proibir? Essas perguntas não tem uma resposta simples e facil e cada
+      familia tera sua própria forma de lidar com essas e outras questões.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/orientacao-ilustration-2.png' %}"
+        alt="guidance ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A orientação de pais tem por objetivo auxiliar os pais a encontrarem essas
+      respostas, além disso a orientação parental pode melhorar as habilidades
+      parentais, fortalecer o relacionamento entre pais e filhos, melhorar a
+      saúde mental e emocional da família, prevenir problemas de comportamento e
+      aprender a resolver conflitos
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}

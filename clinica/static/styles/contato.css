@@ -1,90 +1,91 @@
 .mainlogo {
-    margin: 10px;
-    width: 200px;
+  margin: 10px;
+  width: 200px;
 }
 
 main .container {
-    max-width: 500px;
-    margin: 20px ;
-    padding: 5px;
-    box-shadow: 0px 0px 50px var(--black-transparent);
-    border-radius: 15px;
-    background-image: url('/assets/textura.png');
+  max-width: 500px;
+  margin: 20px;
+  padding: 5px;
+  box-shadow: 0px 0px 50px var(--black-transparent);
+  border-radius: 15px;
+  background-image: url("../assets/textura.png");
 }
 
 h1 {
-    color: var(--color1);
-    margin-bottom: 50px;
+  color: var(--color1);
+  margin-bottom: 50px;
 }
 
 form {
-    margin-inline: 15px;
+  margin-inline: 15px;
 }
-label{
-    display: grid;
-    margin-bottom: 10px;
+label {
+  display: grid;
+  margin-bottom: 10px;
 }
 fieldset {
-    display: grid;
-    border: none;
-    margin-bottom: 10px;
+  display: grid;
+  border: none;
+  margin-bottom: 10px;
 }
 
 fieldset > * {
-    display: flex;
-    margin: 5px;
+  display: flex;
+  margin: 5px;
 }
 
 input {
-    margin-right: 3px;
+  margin-right: 3px;
 }
 
-input[type='text'], input[type='number'] {
-    height: 30px;
+input[type="text"],
+input[type="number"] {
+  height: 30px;
 }
 
 hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 textarea {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 #formsubmit {
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-    border: none;
-    color: var(--white);
-    background-color: var(--button-color);
-} 
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #ffff;
+  background-color: var(--button-color);
+}
 
 #formsubmit:hover {
-    background-color: var(--button-color-transparent);
+  background-color: var(--button-color-transparent);
 }
 
 span {
-    margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 b {
-    color: red;
+  color: red;
 }
 
 main a {
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    color: var(--white);
-    font-size: xx-large;
-    background-color: #4EB53C;
-    text-decoration: none;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  color: #ffff;
+  font-size: xx-large;
+  background-color: #4eb53c;
+  text-decoration: none;
+  padding: 10px;
 }
 
 main svg {
-    margin-inline: 10px;
+  margin-inline: 10px;
 }

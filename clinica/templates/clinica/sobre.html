@@ -1,0 +1,46 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+{% endblock %} {% block content %}
+<main>
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/sobre-ilustration.png' %}"
+        alt="sobre ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Acreditamos que o cuidado com a saúde mental não deve começar somente
+      quando há o adoecimento, como ansiedade, depressão, bournout e etc, o
+      cuidado deve ser diário e constante, pois a ausencia da doença não
+      siginifica saúde!
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/sobre-ilustration-2.png' %}"
+        alt="sobre ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Com essa visão de saúde mental mais ampla, a Clinica Barbieri foi fundada
+      para oferecer um espaço de cuidado á saude com foco nos aspectos
+      psicológicos, mas com o entendimento de que mente e corpo são
+      indissociaveis, assim priorizando o trabalho interdisciplinar.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/sobre-ilustration-3.png' %}"
+        alt="sobre ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Nós contamos com uma equipe de profissionais comprometidos com os deveres
+      éticos de suas profissões e atualizados a respeito das melhores
+      tecnologias para o tratamento de seus pacientes.
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}

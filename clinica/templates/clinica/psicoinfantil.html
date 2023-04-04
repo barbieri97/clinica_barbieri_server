@@ -1,0 +1,36 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+{% endblock%} {% block content %}
+<main>
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/kids-ilustration.png' %}"
+        alt="kids ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A infância é o periodo da vida de maior desenvolvimento, é nessa fase que
+      começamos a desenvolver nossa autoestima, autoconhecimento, aprendemos a
+      nos comunicar, a interagir socialmente e muito mais. É comum que nesse
+      processo de desenvolvimento a criança encontre algumas dificuldades e
+      assim apresentar dificuldades escolares, comportamento violento, medo
+      excessivo e dificuldades de relacionamento.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/kids-ilustration-2.png' %}"
+        alt="kids ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A psicoterapia infantil pode ajudar essas crianças a encontrarem um
+      ambiente de desenvolvimento mais saudável, permitindo que todas as
+      habilidades necessárias para uma vida saudavél seja desenvolvida em seu
+      tempo adequado.
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}

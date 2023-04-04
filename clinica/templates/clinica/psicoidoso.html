@@ -1,0 +1,34 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+{% endblock%} {% block content %}
+<main>
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/idoso-ilustration.png' %}"
+        alt="idoso ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Idosos podem encontrar algumas adversidades em sua vida como a solidão,
+      perda de entes queridos, mudanças físicas e emocionais, problemas de
+      saúde, declínio cognitivo, mudanças financeiras e ajuste à vida
+      aposentada. Se adaptar a um mundo que está em constante mudança pode ser
+      um grande desafio e pode trazer niveis significantes de sofrimento.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/idoso-ilustration-2.png' %}"
+        alt="idoso ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Procurar ajuda na psicoterapia pode ajudar a lidar com questões
+      emocionais, melhorar a qualidade de vida e fornecer suporte durante as
+      transições da vida.
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}

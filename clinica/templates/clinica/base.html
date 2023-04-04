@@ -1,121 +1,266 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6P9CVNT6V"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C6P9CVNT6V"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-C6P9CVNT6V');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C6P9CVNT6V");
     </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Clinica Barbieri</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/b_favico_white.png">
-    <link rel="stylesheet" href="{% static '/styles/base.css' %}">
-    <link rel="stylesheet" href="{% static '/styles/menu.css' %}">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'assets/b_favico_white.png' %}"
+    />
+    <link rel="stylesheet" href="{% static '/styles/base.css' %}" />
+    <link rel="stylesheet" href="{% static '/styles/menu.css' %}" />
     {% block link %}{% endblock %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-    <div id="loadingMask" style="width: 100%; height: 100%; position: absolute; background: #fff;">
-      <img src="{% static '/assets/preloader.gif' %}" style="position: absolute; top: 50%; left: 50%;">
-    </div>
     <header>
-        <a href="/"><img src="{% static 'assets/logo_claro_sem_fundo.png' %}" alt="logo" class="logonav"></a>
-        <nav>
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="menuico">
-              <rect width="50" height="50"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 10C1.5 8.89543 2.39543 8 3.5 8H46.5C47.6046 8 48.5 8.89543 48.5 10C48.5 11.1046 47.6046 12 46.5 12H3.5C2.39543 12 1.5 11.1046 1.5 10Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 25C2 23.8954 2.89543 23 4 23H47C48.1046 23 49 23.8954 49 25C49 26.1046 48.1046 27 47 27H4C2.89543 27 2 26.1046 2 25Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 40C1 38.8954 1.89543 38 3 38H46C47.1046 38 48 38.8954 48 40C48 41.1046 47.1046 42 46 42H3C1.89543 42 1 41.1046 1 40Z" fill="black"/>
-              </svg>              
-        </nav>
-        <menu>
-          <div class="menu-open">
-            <img src="{% static '/assets/logo_escuro_sem_fundo.png' %}" alt="logo">
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="close-menu">
-                <g clip-path="url(#clip0_106_42)">
-                <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM2 25C2 37.7025 12.2975 48 25 48C37.7025 48 48 37.7025 48 25C48 12.2975 37.7025 2 25 2C12.2975 2 2 12.2975 2 25Z" fill="#D9D9D9"/>
-                <path d="M12.2433 13L39 37" stroke="#D9D9D9" stroke-linecap="round"/>
-                <path d="M11.5 37L38.2568 13" stroke="#D9D9D9" stroke-linecap="round"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_106_42">
-                <rect width="50" height="50" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>                
-          </div>
-          <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/sobre">Sobre</a></li>
-              <li><a href="/contato">Agende sua consulta</a></li>
-              <p>Serviços:</p>
-              <li><a href="/orientacao">Orientação Parental</a></li>
-              <li><a href="/psicoadolescente">Psicoterapia para adolescentes</a></li>
-              <li><a href="/psicoadulto">Psicoterapia para adultos</a></li>
-              <li><a href="/psicoidoso">Psicoterapia para idosos</a></li>
-              <li><a href="/psicoinfantil">Psicoterapia infantil</a></li>
-            </ul>
-        </menu>
+      <a href="/"
+        ><img
+          src="{% static 'assets/logo_claro_sem_fundo.png' %}"
+          alt="logo"
+          class="logonav"
+      /></a>
+      <nav>
+        <svg
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="menuico"
+        >
+          <rect width="50" height="50" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1.5 10C1.5 8.89543 2.39543 8 3.5 8H46.5C47.6046 8 48.5 8.89543 48.5 10C48.5 11.1046 47.6046 12 46.5 12H3.5C2.39543 12 1.5 11.1046 1.5 10Z"
+            fill="black"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 25C2 23.8954 2.89543 23 4 23H47C48.1046 23 49 23.8954 49 25C49 26.1046 48.1046 27 47 27H4C2.89543 27 2 26.1046 2 25Z"
+            fill="black"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1 40C1 38.8954 1.89543 38 3 38H46C47.1046 38 48 38.8954 48 40C48 41.1046 47.1046 42 46 42H3C1.89543 42 1 41.1046 1 40Z"
+            fill="black"
+          />
+        </svg>
+      </nav>
+      <menu>
+        <div class="menu-open">
+          <img
+            src="{% static '/assets/logo_escuro_sem_fundo.png' %}"
+            alt="logo"
+          />
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="close-menu"
+          >
+            <g clip-path="url(#clip0_106_42)">
+              <path
+                d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM2 25C2 37.7025 12.2975 48 25 48C37.7025 48 48 37.7025 48 25C48 12.2975 37.7025 2 25 2C12.2975 2 2 12.2975 2 25Z"
+                fill="#D9D9D9"
+              />
+              <path
+                d="M12.2433 13L39 37"
+                stroke="#D9D9D9"
+                stroke-linecap="round"
+              />
+              <path
+                d="M11.5 37L38.2568 13"
+                stroke="#D9D9D9"
+                stroke-linecap="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_106_42">
+                <rect width="50" height="50" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/contato">Agende sua consulta</a></li>
+          <p>Serviços:</p>
+          <li><a href="/orientacao">Orientação Parental</a></li>
+          <li>
+            <a href="/psicoadolescente">Psicoterapia para adolescentes</a>
+          </li>
+          <li><a href="/psicoadulto">Psicoterapia para adultos</a></li>
+          <li><a href="/psicoidoso">Psicoterapia para idosos</a></li>
+          <li><a href="/psicoinfantil">Psicoterapia infantil</a></li>
+        </ul>
+      </menu>
     </header>
-    {% block content %}{% endblock %}   
+    {% block content %}{% endblock %}
     <footer>
       <section class="despedida">
-                <h1 class="desptext">Clínica Barbieri</h1>
-                <p class="desptext">Ao começar a psicoterapia você vai encontrar ajuda para lidar com problemas emocionais e comportamentais, pode aumentar sua autoestima, melhorar suas relações e ajudar a alcançar suas metas. Será um espaço seguro para processar sentimentos difíceis e obter perspectivas valiosas!
-                </p>
-                <a href="/contato" target="_blank"><button class="agendar">AGENDE SUA CONSULTA</button></a>
-        </section>
-        <section class="redes">
-            <a href="https://medium.com/@barbieri.psi" target="_blank">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="redesicone">
-                <path d="M28 25C28 32.1797 22.1797 38 15 38C7.8203 38 2 32.1797 2 25C2 17.8203 7.8203 12 15 12C22.1797 12 28 17.8203 28 25Z" fill="#D9D9D9"/>
-                <path d="M42 25.5C42 32.4036 39.0899 38 35.5 38C31.9101 38 29 32.4036 29 25.5C29 18.5964 31.9101 13 35.5 13C39.0899 13 42 18.5964 42 25.5Z" fill="#D9D9D9"/>
-                <path d="M48 25.5C48 31.8513 46.8807 37 45.5 37C44.1193 37 43 31.8513 43 25.5C43 19.1487 44.1193 14 45.5 14C46.8807 14 48 19.1487 48 25.5Z" fill="#D9D9D9"/>
-              </svg>
-              </a>
-            <a href="https://www.instagram.com/barbieri.psi/" target="_blank">
-              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="redesicone">
-                <g clip-path="url(#clip0_107_54)">
-                <g filter="url(#filter0_d_107_54)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 15C3.5 8.0963 9.09906 2.5 16.0025 2.5H34.8571C41.8174 2.5 47.4397 8.18529 47.3588 15.1453L47.1379 34.1453C47.0583 40.9919 41.483 46.5 34.6363 46.5H16.0025C9.09906 46.5 3.5 40.9037 3.5 34V15ZM16.0025 3.5C9.65108 3.5 4.5 8.64886 4.5 15V34C4.5 40.3511 9.65108 45.5 16.0025 45.5H34.6363C40.9355 45.5 46.0647 40.4323 46.1379 34.1337L46.3589 15.1337C46.4333 8.73073 41.2608 3.5 34.8571 3.5H16.0025Z" fill="#D9D9D9"/>
-                </g>
-                <path d="M38 25C38 32.1797 32.1797 38 25 38C17.8203 38 12 32.1797 12 25C12 17.8203 17.8203 12 25 12C32.1797 12 38 17.8203 38 25ZM13.2675 25C13.2675 31.4797 18.5203 36.7325 25 36.7325C31.4797 36.7325 36.7325 31.4797 36.7325 25C36.7325 18.5203 31.4797 13.2675 25 13.2675C18.5203 13.2675 13.2675 18.5203 13.2675 25Z" fill="#D9D9D9"/>
-                <path d="M40 12C40 13.1046 39.1046 14 38 14C36.8954 14 36 13.1046 36 12C36 10.8954 36.8954 10 38 10C39.1046 10 40 10.8954 40 12Z" fill="#D9D9D9"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_107_54" x="-0.5" y="2.5" width="51.8597" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="4"/>
-                <feGaussianBlur stdDeviation="2"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_107_54"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_107_54" result="shape"/>
-                </filter>
-                <clipPath id="clip0_107_54">
-                <rect width="50" height="50" fill="white"/>
-                </clipPath>
-                </defs>
-              </svg>
-            </a>    
-            <a href="https://www.linkedin.com/in/andre-barbieri" target="_blank">
-              <svg width="50" height="48" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="redesicone">
-                <path d="M39.5 4.5H10.5C7.18629 4.5 4.5 7.18629 4.5 10.5V39.5C4.5 42.8137 7.18629 45.5 10.5 45.5H39.5C42.8137 45.5 45.5 42.8137 45.5 39.5V10.5C45.5 7.18629 42.8137 4.5 39.5 4.5Z" stroke="#D9D9D9" stroke-linecap="round"/>
-                <path d="M17.5 19.5H10.5V39.5H17.5V19.5Z" stroke="#D9D9D9" stroke-linecap="round"/>
-                <path d="M14.5 11.5H13.5C11.8431 11.5 10.5 12.8431 10.5 14.5C10.5 16.1569 11.8431 17.5 13.5 17.5H14.5C16.1569 17.5 17.5 16.1569 17.5 14.5C17.5 12.8431 16.1569 11.5 14.5 11.5Z" stroke="#D9D9D9" stroke-linecap="round"/>
-                <path d="M19.5 19.5V39.5H26.5V28C26.5 26.3432 27.8431 25 29.5 25C31.1569 25 32.5 26.3432 32.5 28V39.5H39C39 39.5 39.1505 29 39 23.5C38.8924 19.5698 28.8596 16.1223 26.6123 23.1172C26.5325 23.3657 26.5 23.8874 26.5 23.6264V19.5H19.5Z" stroke="#D9D9D9" stroke-linecap="round"/>
-              </svg>
-            </a>
-        </section>
+        <h1 class="desptext">Clínica Barbieri</h1>
+        <p class="desptext">
+          Ao começar a psicoterapia você vai encontrar ajuda para lidar com
+          problemas emocionais e comportamentais, pode aumentar sua autoestima,
+          melhorar suas relações e ajudar a alcançar suas metas. Será um espaço
+          seguro para processar sentimentos difíceis e obter perspectivas
+          valiosas!
+        </p>
+        <a href="/contato" target="_blank"
+          ><button class="agendar">AGENDE SUA CONSULTA</button></a
+        >
+      </section>
+      <section class="redes">
+        <a href="https://medium.com/@barbieri.psi" target="_blank">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="redesicone"
+          >
+            <path
+              d="M28 25C28 32.1797 22.1797 38 15 38C7.8203 38 2 32.1797 2 25C2 17.8203 7.8203 12 15 12C22.1797 12 28 17.8203 28 25Z"
+              fill="#D9D9D9"
+            />
+            <path
+              d="M42 25.5C42 32.4036 39.0899 38 35.5 38C31.9101 38 29 32.4036 29 25.5C29 18.5964 31.9101 13 35.5 13C39.0899 13 42 18.5964 42 25.5Z"
+              fill="#D9D9D9"
+            />
+            <path
+              d="M48 25.5C48 31.8513 46.8807 37 45.5 37C44.1193 37 43 31.8513 43 25.5C43 19.1487 44.1193 14 45.5 14C46.8807 14 48 19.1487 48 25.5Z"
+              fill="#D9D9D9"
+            />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/barbieri.psi/" target="_blank">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="redesicone"
+          >
+            <g clip-path="url(#clip0_107_54)">
+              <g filter="url(#filter0_d_107_54)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.5 15C3.5 8.0963 9.09906 2.5 16.0025 2.5H34.8571C41.8174 2.5 47.4397 8.18529 47.3588 15.1453L47.1379 34.1453C47.0583 40.9919 41.483 46.5 34.6363 46.5H16.0025C9.09906 46.5 3.5 40.9037 3.5 34V15ZM16.0025 3.5C9.65108 3.5 4.5 8.64886 4.5 15V34C4.5 40.3511 9.65108 45.5 16.0025 45.5H34.6363C40.9355 45.5 46.0647 40.4323 46.1379 34.1337L46.3589 15.1337C46.4333 8.73073 41.2608 3.5 34.8571 3.5H16.0025Z"
+                  fill="#D9D9D9"
+                />
+              </g>
+              <path
+                d="M38 25C38 32.1797 32.1797 38 25 38C17.8203 38 12 32.1797 12 25C12 17.8203 17.8203 12 25 12C32.1797 12 38 17.8203 38 25ZM13.2675 25C13.2675 31.4797 18.5203 36.7325 25 36.7325C31.4797 36.7325 36.7325 31.4797 36.7325 25C36.7325 18.5203 31.4797 13.2675 25 13.2675C18.5203 13.2675 13.2675 18.5203 13.2675 25Z"
+                fill="#D9D9D9"
+              />
+              <path
+                d="M40 12C40 13.1046 39.1046 14 38 14C36.8954 14 36 13.1046 36 12C36 10.8954 36.8954 10 38 10C39.1046 10 40 10.8954 40 12Z"
+                fill="#D9D9D9"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_107_54"
+                x="-0.5"
+                y="2.5"
+                width="51.8597"
+                height="52"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="2" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_107_54"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_107_54"
+                  result="shape"
+                />
+              </filter>
+              <clipPath id="clip0_107_54">
+                <rect width="50" height="50" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/andre-barbieri" target="_blank">
+          <svg
+            width="50"
+            height="48"
+            viewBox="0 0 50 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="redesicone"
+          >
+            <path
+              d="M39.5 4.5H10.5C7.18629 4.5 4.5 7.18629 4.5 10.5V39.5C4.5 42.8137 7.18629 45.5 10.5 45.5H39.5C42.8137 45.5 45.5 42.8137 45.5 39.5V10.5C45.5 7.18629 42.8137 4.5 39.5 4.5Z"
+              stroke="#D9D9D9"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17.5 19.5H10.5V39.5H17.5V19.5Z"
+              stroke="#D9D9D9"
+              stroke-linecap="round"
+            />
+            <path
+              d="M14.5 11.5H13.5C11.8431 11.5 10.5 12.8431 10.5 14.5C10.5 16.1569 11.8431 17.5 13.5 17.5H14.5C16.1569 17.5 17.5 16.1569 17.5 14.5C17.5 12.8431 16.1569 11.5 14.5 11.5Z"
+              stroke="#D9D9D9"
+              stroke-linecap="round"
+            />
+            <path
+              d="M19.5 19.5V39.5H26.5V28C26.5 26.3432 27.8431 25 29.5 25C31.1569 25 32.5 26.3432 32.5 28V39.5H39C39 39.5 39.1505 29 39 23.5C38.8924 19.5698 28.8596 16.1223 26.6123 23.1172C26.5325 23.3657 26.5 23.8874 26.5 23.6264V19.5H19.5Z"
+              stroke="#D9D9D9"
+              stroke-linecap="round"
+            />
+          </svg>
+        </a>
+      </section>
     </footer>
     <script src="{% static '/scripts/main.js' %}"></script>
     <script src="{% static '/scripts/botaowhats.js' %}"></script>

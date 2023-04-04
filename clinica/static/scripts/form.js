@@ -1,49 +1,53 @@
 // form funcitions
 
-    // Verifica os campos
-    function validate(infos) {
-    if (infos.nome == '') {
-        throw "Isira os campos necessários"
-    }
-    if (infos.idade == '') {
-        throw "Isira os campos necessários"
-    }
-    if (infos.numero == '') {
-        throw "Insira os campos necessários"
-    }
-
+// Verifica os campos
+function validate(infos) {
+  if (infos.nome == "") {
+    throw "Isira os campos necessários";
+  }
+  if (infos.idade == "") {
+    throw "Isira os campos necessários";
+  }
+  if (infos.numero == "") {
+    throw "Insira os campos necessários";
+  }
 }
 
 // Envia o formulario
-$('#formsubmit').click((e) => {
-    e.preventDefault()
-    var infos = {
-        nome: $('#formnome').val(),
-        numero: $('#formnumero').val(),
-        formaEtaria: $('[name=formetaria]:checked').toArray().map((c) => {
-            return $(c).val()
-        }),
-        dia: $('[name=dia]:checked').toArray().map((c) => {
-            return $(c).val()
-        }),
-        periodo: $('[name=periodo]:checked').toArray().map((c) => {
-            return $(c).val()
-        }),
-        texto: $('#texto').val()
-    }
-    try {
-        validate(infos)
-        var body = emailBody(infos)
-        sendEmail(body)
-    } catch (e){
-        alert(e)
-    }
-
-})
+$("#formsubmit").click((e) => {
+  e.preventDefault();
+  var infos = {
+    nome: $("#formnome").val(),
+    numero: $("#formnumero").val(),
+    formaEtaria: $("[name=formetaria]:checked")
+      .toArray()
+      .map((c) => {
+        return $(c).val();
+      }),
+    dia: $("[name=dia]:checked")
+      .toArray()
+      .map((c) => {
+        return $(c).val();
+      }),
+    periodo: $("[name=periodo]:checked")
+      .toArray()
+      .map((c) => {
+        return $(c).val();
+      }),
+    texto: $("#texto").val(),
+  };
+  try {
+    validate(infos);
+    var body = emailBody(infos);
+    sendEmail(body);
+  } catch (e) {
+    alert(e);
+  }
+});
 
 // Cria o body do email
 function emailBody(infos) {
-    var bodyTexto = `
+  var bodyTexto = `
     <h1>Novo contato!</h1>
     <h3>Nome:</h3> 
     <p>${infos.nome}</p>
@@ -77,26 +81,25 @@ function emailBody(infos) {
             margin-top: 5px;
         }
     </style>
-    `
-    return bodyTexto
+    `;
+  return bodyTexto;
 }
 
 // Envia o email
 function sendEmail(body) {
-    const token = "6427981d-1275-48df-afa1-55800b84dfed"
+  const token = "6427981d-1275-48df-afa1-55800b84dfed";
 
-    Email.send({
-        SecureToken : token,
-        To : 'andrepb636@gmail.com',
-        From : "andrepb636@gmail.com",
-        Subject : "Novo contato",
-        Body : body
-    }).then((mensagem) => {
-        if (mensagem == 'OK') {
-            window.location.href = '/agradecimentos.html'
-        } else {
-            alert('houve um erro ao enviar o contato, tente novamente mais tarde.')
-        }
+  Email.send({
+    SecureToken: token,
+    To: "andrepb636@gmail.com",
+    From: "andrepb636@gmail.com",
+    Subject: "Novo contato",
+    Body: body,
+  }).then((mensagem) => {
+    if (mensagem == "OK") {
+      window.location.href = "../agradecimento/1";
+    } else {
+      alert("houve um erro ao enviar o contato, tente novamente mais tarde.");
     }
-    );
+  });
 }

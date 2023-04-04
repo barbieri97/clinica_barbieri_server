@@ -1,0 +1,23 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/agradecimentos.css'%}" />
+{%endblock %} {% block content %}
+<main>
+  <div class="container">
+    <img
+      class="mainlogo"
+      src="{% static 'assets/logo_claro_sem_fundo.png' %}"
+      alt="logo"
+    />
+
+    <h1>Obrigado pelo contato!</h1>
+    <h2>Aguarde que você será redirecionado para nosso whatsapp</h2>
+  </div>
+</main>
+{% endblock %} {% block script %}
+<script>
+  setTimeout(() => {
+    window.location.href =
+      "https://wa.me/5511993971098?text=Olá, Gostaria de mais informações sobre o atendimento.";
+  }, 2000);
+</script>
+{% endblock %}

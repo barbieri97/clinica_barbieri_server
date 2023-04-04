@@ -1,0 +1,35 @@
+{% extends 'clinica/base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+{% endblock %} {% block content %}
+<main>
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/teen-ilustration.png' %}"
+        alt="teen ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A adolescência é um perido de mudanças intensas, dentre as diversas
+      mudanças pode-se destacar as alterações corporais repentinas, mudança nas
+      suas relações afetivas e sociais e é onde começa também a pressão social
+      para que esses jovens comecem a planejar sua vida adulta. Todas essas
+      mudanças podem causar muito estresse, alterações comportamentais e
+      sofrimento.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/teen-ilustration-2.png' %}"
+        alt="teen ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A psicoterapia pode ajudar os adolescentes a explorar suas emoções,
+      pensamentos e desejos, o que pode levar a uma maior compreensão de si
+      mesmos e do mundo ao seu redor.
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}

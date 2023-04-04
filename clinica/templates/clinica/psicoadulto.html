@@ -1,0 +1,38 @@
+<main>
+  {% extends 'clinica/base.html' %} {% load static %} {% block link %}
+  <link rel="stylesheet" href="{% static 'styles/infopage.css' %}" />
+  {% endblock %} {% block content %}
+  <div class="container infopage">
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/adult-ilustration.png' %}"
+        alt="adult ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      A vida adulta é repleta de desafios e obrigações, o que pode nos afastar
+      dos nossos verdadeiros valores e nos trazer aquela sensação de que já não
+      somos nós mesmos, nos questionar o motivo de fazer o que estamos fazendo e
+      com isso vêm muito sofrimento. A psicoterapia pode nos ajudar a nos
+      aproximar de nós mesmo e com isso trazer uma melhor compreensão sobre quem
+      somos o que estamos fazendo em nossa vida.
+    </p>
+    <div class="ilustration">
+      <img
+        src="{% static 'assets/adult-ilustration-2.png' %}"
+        alt="adult ilustration"
+      />
+      <a href="https://storyset.com/event">Event illustrations by Storyset</a>
+    </div>
+    <p>
+      Além disso psicoterapia voltado para adultos tem como objetivo auxiliar em
+      diversas areas da vida como problemas de relacionamento, ansiedade,
+      depressão, estresse, questões de identidade, dificuldades na carreira,
+      luto, problemas de saúde mental e também pode ajudar a lidar com questões
+      emocionais, aprimorar as habilidades de comunicação e resolução de
+      problemas e ajudar a alcançar objetivos pessoais e de vida.
+    </p>
+  </div>
+</main>
+{% endblock %} {% block script %} {% endblock %}
